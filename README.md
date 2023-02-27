@@ -1,8 +1,8 @@
 # Twitter UI Clone.
 
 ## Descrição:
-Este é um projeto desenvolvido com react, utilizando a biblioca de icones 'phosphor'.
-Se trata de um projeto simples, que tem como intuito aprofundar o conhencimento de react, responsividade e clean code.
+Este é um projeto desenvolvido com react, utilizando a biblioca de icones 'phosphor'.\
+Se trata de um projeto simples, que tem como intuito aprofundar o conhencimento de react, responsividade e clean code.\
 Pretendo continuar incrementando o projeto enquanto aprendo mais.
 
 ## Creditos:
