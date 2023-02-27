@@ -1,6 +1,6 @@
 import twitterLogo from '../assets/Logo-twitter.svg'
 import "./Sidebar.css"
-import { House, Hash, Bell, Envelope, Bookmark, FileText, User, DotsThreeCircle  } from 'phosphor-react'
+import { House, Hash, Bell, Envelope, Bookmark, FileText, User, DotsThreeCircle, Pencil  } from 'phosphor-react'
 import { NavLink } from "react-router-dom"
 export function Sidebar(){
     return(
@@ -11,46 +11,46 @@ export function Sidebar(){
             <nav className="main-navigation">
                 <NavLink to="/"  >
                     <House weight="fill"/>
-                    Home
+                    <span>Home</span>
                 </NavLink>
 
                 <a href="">
                     <Hash/>
-                    Explore
+                    <span>Explore</span>
                 </a>
 
                 <a href="">
                     <Bell/>
-                    Notifications
+                    <span>Notifications</span>
                 </a>
 
                 <a href="">
                     <Envelope/>
-                    Messages
+                    <span>Messages</span>
                 </a>
 
                 <a href="">
                     <Bookmark/>
-                    Bookmarks
+                    <span>Bookmarks</span>
                 </a>
 
                 <a href="">
                     <FileText/>
-                    Lists
+                    <span>Lists</span>
                 </a>
 
                 <a href="">
                     <User/>
-                    Profile
+                    <span>Profile</span>
                 </a>
 
                 <a href="">
                     <DotsThreeCircle/>
-                    More
+                    <span>More</span>
                 </a>
             </nav>
 
-            <button className='new-tweet'>Tweet</button>
+            <button className='new-tweet'> <Pencil/> <span>Tweet</span></button>
       </aside>
 
     )

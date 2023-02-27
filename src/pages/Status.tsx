@@ -1,4 +1,5 @@
-import { FormEvent, useState } from "react"
+import { PaperPlaneRight } from "phosphor-react"
+import { FormEvent, KeyboardEvent, useState } from "react"
 import { Separator } from "../components/Separator"
 import { TimelineHeader } from "../components/TimelineHeader"
 import { Tweet } from "../components/Tweet"
@@ -25,6 +26,14 @@ export function Status(){
         setAnswers([ newAnswer,...answers])
         setNewAnswer('')
     }
+
+    function handleHotkeySubmit(ev: KeyboardEvent){
+        if(ev.key === 'Enter' && (ev.ctrlKey /*Windows*/ || ev.metaKey /*MAC*/)){
+            ev.preventDefault()
+            setAnswers([ newAnswer,...answers])
+            setNewAnswer('')
+        }
+    }
     
     return(
         
@@ -38,9 +47,12 @@ export function Status(){
                 <form onSubmit={createNewAnswer} className='answer-tweet-form'>
                     <label htmlFor="tweet">
                         <img src="https://github.com/renan3581.png" alt="Renan Silva" />
-                        <textarea id="tweet" placeholder="Tweet your answer" onChange={(ev)=>setNewAnswer(ev.target.value)} value={newAnswer}/>
+                        <textarea id="tweet" placeholder="Tweet your answer" 
+                        onChange={(ev)=>setNewAnswer(ev.target.value)} 
+                        onKeyDown={handleHotkeySubmit}
+                        value={newAnswer}/>
                     </label>
-                    <button type="submit">answer</button>
+                    <button type="submit"><PaperPlaneRight/><span>answer</span></button>
                 </form>
     
                 
